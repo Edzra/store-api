@@ -14,14 +14,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProductResponseDto {
 
-    public ProductResponseDto(Integer id, String category, String description, LocalDate purchaseDate,
+    public ProductResponseDto(Integer id, String name, String category, String description, LocalDate purchaseDate,
             BigDecimal price) {
         this.id = id;
+        this.name = name;
         this.category = category;
         this.description = description;
         this.purchaseDate = purchaseDate;
         this.price = price;
     }
+
+    private String name;
 
     @JsonProperty("_id")
     private Integer id;
@@ -36,7 +39,7 @@ public class ProductResponseDto {
     private BigDecimal price;
 
     public static ProductResponseDto convert(Product product) {
-        return new ProductResponseDto(product.getId(), product.getCategory().getName(), product.getDescription(),
+        return new ProductResponseDto(product.getId(), product.getName(), product.getCategory().getName(), product.getDescription(),
                 product.getPurchaseDate(), product.getPrice());
     }
 }
