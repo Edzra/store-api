@@ -1,15 +1,14 @@
-package com.eduardo.crudspringproduct.dto;
+package com.uea.store.dto;
+
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.uea.store.model.Category;
+import com.uea.store.model.Product;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
-import com.eduardo.crudspringproduct.model.Category;
-import com.eduardo.crudspringproduct.model.Product;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor

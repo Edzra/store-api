@@ -1,11 +1,13 @@
-package com.eduardo.crudspringproduct;
+package com.uea.store;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudSpringProductApplicationTests {
+class StoreApplicationTests {
+
 	@Test
 	void contextLoads() {
 	}
+
 }

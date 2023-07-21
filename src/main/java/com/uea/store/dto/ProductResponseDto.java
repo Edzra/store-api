@@ -1,21 +1,20 @@
-package com.eduardo.crudspringproduct.dto;
+package com.uea.store.dto;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.uea.store.model.Product;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
-import com.eduardo.crudspringproduct.model.Product;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 public class ProductResponseDto {
 
     public ProductResponseDto(Integer id, String name, String category, String description, LocalDate purchaseDate,
-            BigDecimal price) {
+                              BigDecimal price) {
         this.id = id;
         this.name = name;
         this.category = category;
